@@ -1,6 +1,6 @@
 import express from "express";
 import env from "dotenv";
-import { mainApp } from "./error/mainApp";
+import { mainApp } from "./mainApp";
 import { testDB } from "./config/testDB";
 env.config();
 
