@@ -62,8 +62,10 @@ export const signin = async (req: Request, res: Response) => {
 
 export const view = async (req: Request, res: Response) => {
   try {
+    const users = await authModel.find()
     return res.status(STATUS.OK).json({
-      message : "Viewing all users on the plateform"
+      message : "Viewing all users on the plateform",
+      data: users
     })
   } catch (error) {
     return res.status(STATUS.BAD).json({
